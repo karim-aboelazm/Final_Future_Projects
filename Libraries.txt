@@ -1,0 +1,34 @@
+----------------------------
+pip install pipwin
+pipwin install pyaudio
+-----------------------------
+pip install pyttsx3
+pip install speechrecognition
+pip install torch
+pip install nltk
+pip install json
+pip install requests
+-------------------------------
+pip install webbrowser
+pip install wikipedia
+pip install pywhatkit
+pip install pywikihow
+pip install wolframalpha
+-------------------------------
+pip install requests
+pip install speedtest-cli
+pip install newscatcherapi
+-------------------------------
+-------[ To Open Project ] -----
+    >> pip install virtualenv
+    >> python -m venv future >> Create a virtualenv 
+    >> cd future
+    >> Scripts\activate
+    >> cd src
+    >> pip install -r reqirements.txt
+    >> app.py
+    >> 127.0.0.1:8080   >>> Google
+------------------------------------
+pip install bs4
+pip install lxml
+-----------------------------------

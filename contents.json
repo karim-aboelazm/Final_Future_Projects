@@ -1,0 +1,127 @@
+{
+   "content":[
+       {
+           "tag":"greetings",
+           "patterns":["hello","welcome","hi","whats up","hay","python"],
+           "responses":["hello sir","how are you sir ?","how can i help?","how do you do sir?","hi sir"]
+       },
+       {
+            "tag":"bye",
+            "patterns":["bye","shut","goodbye","see you later","sleep","exit"],
+            "responses":["Bye","I am Going ..","Bye Sir","nice to meet you","see you later"]
+        },
+        {
+            "tag" : "health",
+            "patterns" : ["how are you", "how do you do", "are you fine ?","are you good"],
+            "responses" : ["fine." , "perfect", "cool","Are you Fine ? I'm Fine"]
+        },
+        {
+            "tag" : "identity",
+            "patterns" : ["your name", "what is your name", "who are you","whar are you"],
+            "responses" : ["Python Assistant" ,"An artificial intelligence assistant and my name is Python Assistant","My Name is Python Assistant","I am a voice assistant for you sir"]
+        },
+        {
+            "tag" : "recognize",
+            "patterns" : ["he is", "she is","I am","I'm"],
+            "responses":["recognize"]
+
+        },
+        {
+            "tag" : "time",
+            "patterns" : ["what time is now ?", "what is the time ?", "tell me time","time"],
+            "responses" : ["The time is "]
+
+        },
+        {
+            "tag" : "date",
+            "patterns" : ["what date is ?", "what is the date ?", "tell me date","date"],
+            "responses" : ["The date is "]
+        },
+        {
+            "tag" : "day",
+            "patterns" : ["what day is ?", "what is the day ?", "tell me day","day","today is"],
+            "responses" : ["The day is "]
+        },
+        {
+            "tag" : "wikipedia",
+            "patterns" : ["who is  ?", "about", "what is ","wikipedia","which is","What do you know about ?"],
+            "responses" : ["wikipedia"]
+        },
+        {
+            "tag" : "google",
+            "patterns" : ["google search", "search for", "searching for","search about","google","which is"],
+            "responses" : ["google"]
+        },
+        {
+            "tag" : "website",
+            "patterns" : ["open", "website","site"],
+            "responses" : ["website"]
+        },
+        {
+            "tag" : "playmusic",
+            "patterns" : ["play", "music","youtube music"],
+            "responses" : ["playmusic"]
+        },
+        {
+            "tag" : "temperature",
+            "patterns" : ["temperature","what is the temperature","temperature in","temperature for"],
+            "responses" : ["temperature"]
+        },
+        {
+            "tag" : "calculate",
+            "patterns" : ["calculate","plus","multiply","div on","power","minus","divide","in","into","+","-","/","x"],
+            "responses" : ["calculate"]
+        },
+        {
+            "tag" : "how",
+            "patterns" : ["How can I","how can I do", "how to"],  
+            "responses" : ["how"]
+        },
+        {
+            "tag" : "weather",
+            "patterns" : ["weather in","what is weather in","weather for","tell me the weather for","what is the weather for"],
+            "responses" : ["weather"]
+        },
+        {
+            "tag" : "nasa",
+            "patterns" : ["nasa","Nasa news", "news from Nasa","space news"],   
+            "responses" : ["nasa"]
+        },
+        {
+            "tag" : "speed",
+            "patterns" : ["what Internet speed ?", "Internet speed", "The Speed of internet","check The internet"],
+            "responses" : ["speed"]
+        },
+        {
+            "tag" : "egyptian news",
+            "patterns" : ["Egyptian news","Egy news","EG news","get news","our news","news of Egypt"],   
+            "responses" : ["egyptian news"]
+        },
+        {
+            "tag" : "open word",
+            "patterns" : ["open word file","word file","ms word","microsoft word","open word"],
+            "responses" : ["open word"]
+        },
+        {
+            "tag" : "close word",
+            "patterns" : ["close word","word close","close ms word","close microsoft word","shut word"],
+            "responses" : ["close word"]
+        },
+        {
+            "tag" : "open powerpoint",
+            "patterns" : ["open ppt file","powerpoint file","ms power","microsoft powerpoint","power file","open powerpoint"],
+            "responses" : ["open powerpoint"]
+        },
+        {
+            "tag" : "close powerpoint",
+            "patterns" : ["PowerPoint close","close PowerPoint","shutdown PowerPoint","shut ppt" , "close presentation"],
+            "responses" : ["close powerpoint"]
+        },
+        {
+            "tag" : "corona",
+            "patterns" : ["covid in","corona virus","covid-19","virus in","Corona"],   
+            "responses" : ["corona"]
+        }
+
+   ] 
+}

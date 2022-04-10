@@ -91,23 +91,33 @@ def get_egyptian_news():
 # --------------------------------------
 
 def open_word():
-    click(x=22, y=751)
-    time.sleep(2)
-    write('word')
-    time.sleep(2)
-    press('enter')
+    Say("Open Online Or Local Sir ...")
+    stm = Listen()
+    if str(stm).lower()=="local":
+        click(x=22, y=751)
+        time.sleep(2)
+        write('word')
+        time.sleep(2)
+        press('enter')
+    elif str(stm).lower()=="online":
+        webbrowser.open("https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&response_type=code%20id_token&scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&response_mode=form_post&nonce=637852268094383681.ZmQwMmUzMjctNzg0ZC00YThiLWEyNTUtZDBhNjRiNjVhZDkxZjM0ZDIyOGQtNDdlOC00NGViLWE0MzQtOTQ2ODEyMmFmMTc4&ui_locales=en-US&mkt=en-US&client-request-id=52e8b32d-9213-4910-9580-4ffd9948b5bc&state=RAchbeV9q0zY3NLaoEsNUMBcZesUo6JZeboUdsugu0OmfachSTQsb3uz9-iO5AJ0hghqFNT4sjgXtnyX1kEQUmeBkGruqjTBy3O5HsaFTP22YAhDx_Cqk3qDys3uLtX_7oX7SHekQz3qmieJysa0thdP9osv4W2wO_19WGu9JpowS69Z5iM_gxj3rFek1cxeSk0EySOSmFsp96FXzCFSUHz46h277aYD0-AtH3_xMpdrllmnkPC7iTyiWlvaBtTsN2SnDwKrsByDpOamNa7-f67KqcOkN_EdzAenNtJ5TqY&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.12.1.0")
     
 def close_word():
     time.sleep(1)
     os.system('taskkill /f /im WINWORD.EXE')
 
 def open_powerpoint():
-    click(x=22, y=751)
-    time.sleep(2)
-    write('powerpoint')
-    time.sleep(2)
-    press('enter')
-    
+    Say("Open Online Or Local Sir ...")
+    stm = Listen()
+    if str(stm).lower()=="local":
+        click(x=22, y=751)
+        time.sleep(2)
+        write('powerpoint')
+        time.sleep(2)
+        press('enter')
+    elif str(stm).lower()=="online":
+        webbrowser.open("https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&response_type=code%20id_token&scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&response_mode=form_post&nonce=637852268094383681.ZmQwMmUzMjctNzg0ZC00YThiLWEyNTUtZDBhNjRiNjVhZDkxZjM0ZDIyOGQtNDdlOC00NGViLWE0MzQtOTQ2ODEyMmFmMTc4&ui_locales=en-US&mkt=en-US&client-request-id=52e8b32d-9213-4910-9580-4ffd9948b5bc&state=RAchbeV9q0zY3NLaoEsNUMBcZesUo6JZeboUdsugu0OmfachSTQsb3uz9-iO5AJ0hghqFNT4sjgXtnyX1kEQUmeBkGruqjTBy3O5HsaFTP22YAhDx_Cqk3qDys3uLtX_7oX7SHekQz3qmieJysa0thdP9osv4W2wO_19WGu9JpowS69Z5iM_gxj3rFek1cxeSk0EySOSmFsp96FXzCFSUHz46h277aYD0-AtH3_xMpdrllmnkPC7iTyiWlvaBtTsN2SnDwKrsByDpOamNa7-f67KqcOkN_EdzAenNtJ5TqY&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.12.1.0")
+      
 def close_powerpoint():
     time.sleep(1)
     os.system('taskkill /f /im POWERPNT.EXE')
@@ -139,7 +149,6 @@ def get_command(query):
     elif 'close powerpoint' in query:
         close_powerpoint()
         
-
 # Function of setting wolframalpha API
 def wolframalpha_settings(query):
     api_key = 'WY8246-ERXY7J3P5Y'
@@ -157,9 +166,11 @@ def wikipedia_search(query):
     Say(f"The wikipedia result is :\n {result}")
 
 # Function That return Search result in google  
-def google_search(query):
-    search = str(query).replace("google","").replace("search","").replace("googling","").replace("search for","").replace("search about","")
-    result = pywhatkit.search(search)
+def google_search():
+    Say("Searching For What Sir ....")
+    stm = Listen()
+    search = str(stm)
+    pywhatkit.search(search)
 
 # Function That open any site
 def open_any_website(query):
@@ -186,7 +197,8 @@ def sample_calculator(query):
     operation = str(query).replace("divide","/")
     operation = str(query).replace("divide","/")
     operation = str(query).replace("over","/")
-    Say(f"The Result is {wolframalpha_settings(operation)}")
+    result = eval(str(operation))
+    Say(f"The Result is {result}")
 
 # Function That Getting how to making any thing
 def how_to(query):
@@ -254,16 +266,12 @@ def covid_19(query):
     Say(f"All Recovered Number  : {recovered_casses}   person")
     webbrowser.open(f"https://www.google.com/search?q={country.lower()}+coronavirus")
 
-
-
-
-
 # Functions with query command
 def get_input_command(tag,query):
     if "wikipedia" in tag:
         wikipedia_search(query)
     elif "google" in tag:
-        google_search(query)
+        google_search()
     elif "website" in tag:
         open_any_website(query)
     elif "playmusic" in tag:
@@ -280,6 +288,3 @@ def get_input_command(tag,query):
         welcome_person(query)
     elif "corona" in tag:
         covid_19(query)
-
-
-    

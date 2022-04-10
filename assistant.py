@@ -107,3 +107,15 @@ def assistant():
                     get_input_command(replay,result)  
                 else:
                     Say(replay)
+
+def wake_up():
+    stm = Listen()
+    if stm == 'funny':
+        Say("Yes Sir , Tell Me How Can I Help You ..")
+        while True:
+            assistant()
+    else:
+        while True:
+            wake_up()
+
+assistant()

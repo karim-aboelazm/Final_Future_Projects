@@ -1,13 +1,4 @@
-/**
-* Template Name: TheEvent - v4.7.0
-* Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   background: #fff;
   color: #2f3138;
@@ -466,7 +457,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 16px;
   }
 }
-#hero .play-btn {
+/* /* #hero .playing-btn {
   width: 94px;
   height: 94px;
   background: radial-gradient(#f82249 50%, rgba(101, 111, 150, 0.15) 52%);
@@ -474,8 +465,8 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   position: relative;
   overflow: hidden;
-}
-#hero .play-btn::after {
+} */
+/* #hero .playing-btn::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -489,7 +480,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 100;
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
-#hero .play-btn:before {
+#hero .playing-btn:before {
   content: "";
   position: absolute;
   width: 120px;
@@ -510,12 +501,12 @@ h1, h2, h3, h4, h5, h6 {
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
-}
-#hero .play-btn:hover::after {
+} */
+/* #hero .playing-btn:hover::after {
   border-left: 15px solid #f82249;
   transform: scale(20);
 }
-#hero .play-btn:hover::before {
+#hero .playing-btn:hover::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -531,7 +522,16 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-animation: none;
   animation: none;
   border-radius: 0;
+} */
+
+#hero .play-mic-btn:hover{
+  background-color:transparent;
+  color: #f82249;
+  border-color: #f82249;
+  transition: all 0.5s ease-in-out;           
 }
+
+
 #hero .about-btn {
   font-family: "Raleway", sans-serif;
   font-weight: 500;

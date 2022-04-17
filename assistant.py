@@ -110,7 +110,7 @@ def assistant():
 
 def wake_up():
     stm = Listen()
-    if stm == 'funny':
+    if stm == 'future':
         Say("Yes Sir , Tell Me How Can I Help You ..")
         while True:
             assistant()
@@ -118,4 +118,5 @@ def wake_up():
         while True:
             wake_up()
 
-assistant()
+while True:
+        wake_up()

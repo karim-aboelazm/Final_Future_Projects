@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 import json
 import torch
 import torch.nn as nn
@@ -39,7 +40,7 @@ for (patern_stm, tag) in xy:
 x_train = np.array(x_train)
 y_train = np.array(y_train)
 
-number_epochs = 2000
+number_epochs = 1000
 batch_size = 8
 lr = 0.001
 input_size = len(x_train[0])
@@ -75,7 +76,9 @@ criterion = nn.CrossEntropyLoss() # getting error < Activation Function >
 
 optimizer = torch.optim.Adam(model.parameters(),lr=lr)
 
-
+ep = [i*100 for i in range(1,11)]
+x = np.array(ep)
+y = []
 for epoch in range(number_epochs):
     for (words,labels) in train_loader:
         words = words.to(device)
@@ -92,9 +95,18 @@ for epoch in range(number_epochs):
         optimizer.step()
 
     if (epoch+1) % 100 == 0:
+        y.append(loss.item())
         print(f"Epoch [{epoch+1} of {number_epochs}] , loss[{loss.item():.8f}]")
 
 print(f"Final Loss = [{loss.item():.8f}]")
+
+y = np.array(y)
+plt.title("Training Results")
+plt.xlabel("Epochs") 
+plt.ylabel("Error")
+plt.plot(x, y, 'r')
+plt.show()
+
 
 
 

@@ -1,32 +1,22 @@
-# [1] Pytorch >> pip install torch
-# [2] torchversion >> pip install torchversion
-# [3] torch.nn >> Torch NeuralNetwork Module 
-
-
+# pip install torch >> 'Python=3.9.7'
 import torch.nn as nn
-
 class NeuralNetwork(nn.Module):
-    def __init__(self,inputs, hidden ,outputs):
-        super(NeuralNetwork,self).__init__()
-
-        # Linear regression ( Y = mX + b ) 
-        self.LayerOne = nn.Linear(inputs,hidden)
-        self.LayerTwo = nn.Linear(hidden,hidden)
-        self.LayerThree = nn.Linear(hidden,outputs)
-        # ReLU algorithm >> Chech Errors (Activation Function)
-        self.relu = nn.ReLU()
-        
+    def __init__(self,inputs,hidden,outputs):
+        super(NeuralNetwork, self).__init__()        
+        self.layerOne = nn.Linear(inputs,hidden) # Layer one in inputs -> hidden
+        self.layerTwo = nn.Linear(hidden,hidden) # Layer two in hidden -> hidden        
+        self.layerThree = nn.Linear(hidden,outputs) # Layer three in hidden -> output        
+        self.relu = nn.ReLU() # ReLU for relationship
+    
     def forward(self,x):
-
-        out = self.LayerOne(x)
+        out = self.layerOne(x)
         out = self.relu(out)
-
-        out = self.LayerTwo(out)
+        out = self.layerTwo(out)
         out = self.relu(out)
-
-        out = self.LayerThree(out)
-
+        out = self.layerThree(out)
         return out
 
-        
 
+
+
+        

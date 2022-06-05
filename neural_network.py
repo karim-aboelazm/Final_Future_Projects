@@ -1,26 +1,18 @@
-# [1] Numpy >> pip install numpy
-# nltk >> Natural Language Toolkit >> pip install nltk
-
 import numpy as np
 import nltk
-from nltk.stem.porter import PorterStemmer
-
+from nltk.stem.porter import PorterStemmer 
+# nltk.download('punkt')
 stemmer = PorterStemmer()
-
-# tokenize >> التعرف علي الكلام 
-def tokenize(stm):
-    return nltk.word_tokenize(stm)
-
-# stem >> تفكك الكلام
-def stem(word):
+def tokenize(txt): 
+    return nltk.word_tokenize(txt)
+def stem(word): 
     return stemmer.stem(word.lower())
-
-# bag >>  حقيبة  
-def bag_of_words(word_tokenize,words):
-    stm_word = [stem(word) for word in word_tokenize]
+def bag_of_words(tokenized_txt,words):
+    stem_word = [stem(word) for word in tokenized_txt]
     bag = np.zeros(len(words),dtype=np.float32)
-    for indx , w in enumerate(words):
-        if w in stm_word:
+    for indx , w in enumerate(words): 
+        if w in stem_word:
             bag[indx] = 1
     return bag
 
+    
